@@ -1,0 +1,177 @@
+/* Cotton Foundation brand tokens — CSS custom properties.
+   Mirrors tokens/cotton-foundation.tokens.json and guidelines/colors.md + typography.md + components.md.
+   Values were read from the old cottonfoundation.org kit and the logo files on 2026-09-22.
+   Provisional values are flagged in the JSON and in brand/decision-log.md. */
+
+:root {
+  /* Primary */
+  --cf-navy: #17345E;            /* Foundation Navy · kit primary · Pantone 534 C nearest (unverified) */
+  --cf-cotton-gold: #9F762B;     /* Cotton Gold · the boll in the logo · mark color only */
+  --cf-harvest-gold: #A07400;    /* Harvest Gold · kit secondary · eyebrows, small accents */
+
+  /* Secondary */
+  --cf-horizon-blue: #3E6B9C;    /* Horizon Blue · eyebrows on photography, blue stat figures */
+  --cf-signal-red: #BD202E;      /* Signal Red · form errors and alerts only */
+
+  /* Accent */
+  --cf-hope-gold: #E0A600;       /* Hope Gold · the primary CTA fill · always with Ink text */
+
+  /* Neutral */
+  --cf-ink: #17212E;             /* Ink · body and heading text on light grounds */
+  --cf-slate: #808285;           /* Slate · captions and metadata only (3.85:1 on white) */
+  --cf-silver: #B1B1C2;          /* Silver · rules, borders, outline strokes on navy */
+  --cf-mist: #F5F8FA;            /* Mist · alternate section background */
+  --cf-cloud: #F3F3F3;           /* Cloud · field fills, subtle panels */
+  --cf-white: #FFFFFF;
+  --cf-black: #000000;           /* utility only */
+
+  /* Semantic */
+  --cf-page-bg: var(--cf-white);
+  --cf-page-bg-alt: var(--cf-mist);
+  --cf-surface-dark: var(--cf-navy);
+  --cf-text: var(--cf-ink);
+  --cf-text-muted: var(--cf-slate);
+  --cf-text-on-dark: var(--cf-white);
+  --cf-heading: var(--cf-navy);
+  --cf-heading-on-dark: var(--cf-white);
+  --cf-eyebrow: var(--cf-harvest-gold);
+  --cf-eyebrow-on-dark: var(--cf-horizon-blue);   /* as built; Hope Gold or white recommended for contrast */
+  --cf-stat-on-dark: var(--cf-hope-gold);
+  --cf-link: var(--cf-navy);
+  --cf-cta-fill: var(--cf-hope-gold);
+  --cf-cta-text: var(--cf-ink);
+  --cf-button-fill: var(--cf-navy);
+  --cf-button-text: var(--cf-white);
+  --cf-rule: var(--cf-silver);
+  --cf-error: var(--cf-signal-red);
+  --cf-overlay-hero: rgba(23, 52, 94, 0.72);
+
+  /* Type */
+  --cf-font-display: "Cormorant Garamond", "Cormorant", "EB Garamond", Georgia, serif;
+  --cf-font-sans: "PT Sans", "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --cf-font-sans-alt: "DM Sans", "PT Sans", sans-serif;   /* provisional, see decision log Q5 */
+
+  --cf-weight-display: 700;
+  --cf-weight-body: 400;
+  --cf-weight-ui: 700;
+  --cf-weight-nav: 600;
+
+  --cf-size-base: 16px;
+  --cf-size-small: 15px;
+  --cf-size-caption: 13px;
+  --cf-size-eyebrow: 16px;       /* as built; 13–14px recommended */
+  --cf-size-nav: 15px;
+  --cf-size-button: 16px;
+  --cf-size-h4: 24px;
+  --cf-size-h3: 32px;
+  --cf-size-h2: 40px;
+  --cf-size-h2-large: 48px;
+  --cf-size-h1: 64px;
+  --cf-size-stat: 56px;
+  --cf-size-stat-hero: 120px;
+
+  --cf-leading-body: 1.5;
+  --cf-leading-heading: 1.2;     /* recommended; the site inherits 1.5 */
+  --cf-leading-ui: 1.35;
+
+  --cf-tracking-nav: 1px;
+  --cf-tracking-eyebrow: 1px;    /* as built; 0.08–0.12em recommended */
+  --cf-tracking-heading-caps: 1px;
+
+  /* Layout */
+  --cf-container-max: 1440px;
+  --cf-content-max: 980px;
+  --cf-text-max: 720px;
+  --cf-gutter: 24px;
+  --cf-section-padding: 80px;
+  --cf-grid-gap: 64px;
+  --cf-grid-gap-cards: 24px;
+  --cf-header-height: 112px;
+  --cf-radius-card: 24px;
+  --cf-radius-panel: 24px;
+  --cf-radius-button: 8px;
+  --cf-radius-field: 4px;
+  --cf-shadow-card: 0 2px 4px rgba(0, 0, 0, 0.10);
+  --cf-shadow-header: 0 2px 12px rgba(23, 52, 94, 0.08);
+  --cf-rule-weight: 1px;
+  --cf-button-padding: 12px 24px;
+  --cf-button-border: 2px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --cf-gutter: 16px;
+    --cf-section-padding: 48px;
+    --cf-grid-gap: 32px;
+    --cf-size-h1: 40px;
+    --cf-size-h2: 32px;
+    --cf-size-h2-large: 36px;
+    --cf-size-h3: 26px;
+    --cf-size-stat: 44px;
+    --cf-size-stat-hero: 80px;
+    --cf-header-height: 72px;
+  }
+}
+
+/* Base usage — the patterns documented in guidelines/components.md */
+body {
+  background: var(--cf-page-bg);
+  color: var(--cf-text);
+  font-family: var(--cf-font-sans);
+  font-size: var(--cf-size-base);
+  line-height: var(--cf-leading-body);
+}
+h1, h2, h3, h4, .cf-stat {
+  font-family: var(--cf-font-display);
+  font-weight: var(--cf-weight-display);
+  line-height: var(--cf-leading-heading);
+  color: var(--cf-heading);
+}
+h1 { font-size: var(--cf-size-h1); }
+h2 { font-size: var(--cf-size-h2); }
+h3 { font-size: var(--cf-size-h3); }
+h4 { font-size: var(--cf-size-h4); }
+.cf-stat { font-size: var(--cf-size-stat); }
+
+.cf-eyebrow {
+  font-family: var(--cf-font-sans);
+  font-weight: var(--cf-weight-ui);
+  font-size: var(--cf-size-eyebrow);
+  letter-spacing: var(--cf-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--cf-eyebrow);
+}
+
+.cf-button,
+.cf-button--cta,
+.cf-button--outline {
+  display: inline-block;
+  font-family: var(--cf-font-sans);
+  font-weight: var(--cf-weight-ui);
+  font-size: var(--cf-size-button);
+  line-height: var(--cf-leading-ui);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: var(--cf-button-padding);
+  border-radius: var(--cf-radius-button);
+  border: var(--cf-button-border) solid transparent;
+}
+.cf-button { background: var(--cf-button-fill); color: var(--cf-button-text); }
+.cf-button--cta { background: var(--cf-cta-fill); color: var(--cf-cta-text); }
+.cf-button--outline { background: transparent; color: currentColor; border-color: currentColor; }
+
+.cf-card {
+  background: var(--cf-white);
+  border-radius: var(--cf-radius-card);
+  box-shadow: var(--cf-shadow-card);
+  overflow: hidden;
+}
+.cf-panel--dark {
+  background: var(--cf-surface-dark);
+  color: var(--cf-text-on-dark);
+  border-radius: var(--cf-radius-panel);
+}
+.cf-panel--dark h1, .cf-panel--dark h2, .cf-panel--dark h3 { color: var(--cf-heading-on-dark); }
+.cf-panel--dark .cf-eyebrow { color: var(--cf-eyebrow-on-dark); }
+.cf-panel--dark .cf-stat { color: var(--cf-stat-on-dark); }
+.cf-rule { border: 0; border-top: var(--cf-rule-weight) solid var(--cf-rule); }

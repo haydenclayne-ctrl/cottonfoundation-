@@ -1,0 +1,163 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Cotton Foundation brand tokens. Human source of truth: guidelines/colors.md, guidelines/typography.md, guidelines/components.md. Values were read from the old cottonfoundation.org Elementor kit and the supplied logo files on 2026-09-22 (see references/website-audit.md). Values marked provisional are pending the owner's answers in brand/decision-log.md.",
+  "brand": {
+    "name": { "$value": "Cotton Foundation", "$type": "string" },
+    "legal-name": { "$value": "The Cotton Charitable Foundation", "$type": "string", "$description": "Registered 501(c)(3), as stated in the old site's tax line. Confirm the exact legal name with the owner (decision log Q2)." },
+    "flagship-program": { "$value": "Taylor's Place", "$type": "string", "$description": "Owned and operated by Cotton Foundation." },
+    "mark": { "$value": "Cotton boll held in two hands (assets/marks/cf-mark_full-color.svg)", "$type": "string" },
+    "brand-idea": { "$value": "Restoring Hope", "$type": "string", "$description": "The recurring phrase of the brand (the mission statement, the old home-page headline). Not confirmed as an official tagline (decision log Q4)." },
+    "version": { "$value": "1.0.0", "$type": "string" },
+    "updated": { "$value": "2026-09-22", "$type": "string" }
+  },
+  "color": {
+    "primary": {
+      "navy": { "$value": "#17345E", "$type": "color", "$description": "Foundation Navy. Elementor kit primary. RGB 23/52/94. CMYK starting point 100/80/30/25. Pantone 534 C nearest (unverified). The supplied logo PNGs measure #16345E; the canonical value is the site kit value (decision D3)." },
+      "cotton-gold": { "$value": "#9F762B", "$type": "color", "$description": "Cotton Gold. The exact fill of the cotton boll in the 2026 logo files. RGB 159/118/43. CMYK starting point 30/50/95/15. Pantone 7557 C nearest (unverified). Mark color only; not a UI color." },
+      "harvest-gold": { "$value": "#A07400", "$type": "color", "$description": "Harvest Gold. Elementor kit secondary. RGB 160/116/0. CMYK starting point 30/50/100/15. Pantone 125 C / 7557 C region (unverified). Eyebrow labels, small accents, the SUBMIT and secondary CTA fills." }
+    },
+    "secondary": {
+      "horizon-blue": { "$value": "#3E6B9C", "$type": "color", "$description": "Horizon Blue. RGB 62/107/156. Pantone 7683 C nearest (unverified). Eyebrow labels on navy and photographic grounds (as built); statistic figures on light grounds." },
+      "signal-red": { "$value": "#BD202E", "$type": "color", "$description": "Signal Red. RGB 189/32/46. Pantone 1797 C nearest (unverified). Defined in the site kit; reserved for form errors and alerts only. Never decorative." }
+    },
+    "accent": {
+      "hope-gold": { "$value": "#E0A600", "$type": "color", "$description": "Hope Gold. RGB 224/166/0. Pantone 124 C nearest (unverified). The primary call-to-action fill (Learn More About Taylor's Place, Donate Now in the footer). Always with Ink text, never white text." }
+    },
+    "neutral": {
+      "ink": { "$value": "#17212E", "$type": "color", "$description": "Ink. Elementor kit text color. RGB 23/33/46. Body and heading text on light grounds; text on Hope Gold buttons." },
+      "slate": { "$value": "#808285", "$type": "color", "$description": "Slate. RGB 128/130/133. The Astra theme body-text default. 3.7:1 on white: fails WCAG AA for body text. Captions, metadata and disabled states only (decision log Q6)." },
+      "silver": { "$value": "#B1B1C2", "$type": "color", "$description": "Silver. RGB 177/177/194. Rules, borders, outline-button strokes on dark grounds, form field borders." },
+      "mist": { "$value": "#F5F8FA", "$type": "color", "$description": "Mist. RGB 245/248/250. Alternate page section background (the Who We Are band)." },
+      "cloud": { "$value": "#F3F3F3", "$type": "color", "$description": "Cloud. RGB 243/243/243. Elementor kit light gray. Form field fills, subtle panels." },
+      "white": { "$value": "#FFFFFF", "$type": "color", "$description": "White. The page ground; the mark and lockup reversed on navy and on photography." },
+      "black": { "$value": "#000000", "$type": "color", "$description": "Utility only: engraving, laser, vinyl cut, forms." }
+    },
+    "semantic": {
+      "page-background": { "$value": "{color.neutral.white}", "$type": "color" },
+      "page-background-alt": { "$value": "{color.neutral.mist}", "$type": "color" },
+      "surface-dark": { "$value": "{color.primary.navy}", "$type": "color" },
+      "text": { "$value": "{color.neutral.ink}", "$type": "color" },
+      "text-muted": { "$value": "{color.neutral.slate}", "$type": "color" },
+      "text-on-dark": { "$value": "{color.neutral.white}", "$type": "color" },
+      "heading": { "$value": "{color.primary.navy}", "$type": "color" },
+      "heading-on-dark": { "$value": "{color.neutral.white}", "$type": "color" },
+      "eyebrow": { "$value": "{color.primary.harvest-gold}", "$type": "color" },
+      "eyebrow-on-dark": { "$value": "{color.secondary.horizon-blue}", "$type": "color" },
+      "stat-on-dark": { "$value": "{color.accent.hope-gold}", "$type": "color" },
+      "link": { "$value": "{color.primary.navy}", "$type": "color" },
+      "cta-fill": { "$value": "{color.accent.hope-gold}", "$type": "color" },
+      "cta-text": { "$value": "{color.neutral.ink}", "$type": "color" },
+      "button-fill": { "$value": "{color.primary.navy}", "$type": "color" },
+      "button-text": { "$value": "{color.neutral.white}", "$type": "color" },
+      "rule": { "$value": "{color.neutral.silver}", "$type": "color" },
+      "error": { "$value": "{color.secondary.signal-red}", "$type": "color" }
+    }
+  },
+  "font": {
+    "family": {
+      "display": { "$value": ["Cormorant Garamond", "Cormorant", "EB Garamond", "Georgia", "serif"], "$type": "fontFamily", "$description": "Headings, statistics, pull quotes. Google Fonts, SIL OFL. The site loads weights 300-700 with italics; headings use 700." },
+      "sans": { "$value": ["PT Sans", "Source Sans 3", "Helvetica Neue", "Arial", "sans-serif"], "$type": "fontFamily", "$description": "Body copy, navigation, buttons, eyebrows, forms. Google Fonts, SIL OFL. Weights 400 and 700 (600 is synthesized on the site's nav)." },
+      "sans-alt": { "$value": ["DM Sans", "PT Sans", "sans-serif"], "$type": "fontFamily", "$description": "Loaded by the site and set as the Elementor 'Text' and 'Accent' global fonts, but computed body text renders in PT Sans. Provisional; decision log Q5 decides whether the system keeps one sans or two." }
+    },
+    "weight": {
+      "display": { "$value": 700, "$type": "fontWeight" },
+      "display-light": { "$value": 400, "$type": "fontWeight" },
+      "body": { "$value": 400, "$type": "fontWeight" },
+      "ui": { "$value": 700, "$type": "fontWeight" },
+      "nav": { "$value": 600, "$type": "fontWeight" }
+    },
+    "size": {
+      "web-base": { "$value": "16px", "$type": "dimension" },
+      "web-small": { "$value": "15px", "$type": "dimension" },
+      "web-caption": { "$value": "13px", "$type": "dimension" },
+      "web-eyebrow": { "$value": "16px", "$type": "dimension", "$description": "As built. Recommended 13-14px; see guidelines/typography.md." },
+      "web-nav": { "$value": "15px", "$type": "dimension" },
+      "web-button": { "$value": "16px", "$type": "dimension" },
+      "web-h4": { "$value": "24px", "$type": "dimension" },
+      "web-h3": { "$value": "32px", "$type": "dimension" },
+      "web-h2": { "$value": "40px", "$type": "dimension" },
+      "web-h2-large": { "$value": "48px", "$type": "dimension" },
+      "web-h1": { "$value": "64px", "$type": "dimension" },
+      "web-stat": { "$value": "56px", "$type": "dimension" },
+      "web-stat-hero": { "$value": "120px", "$type": "dimension" },
+      "print-body": { "$value": "10.5pt", "$type": "dimension" },
+      "print-eyebrow": { "$value": "8pt", "$type": "dimension" }
+    },
+    "line-height": {
+      "body": { "$value": 1.5, "$type": "number" },
+      "body-loose": { "$value": 1.65, "$type": "number" },
+      "heading-as-built": { "$value": 1.5, "$type": "number", "$description": "The Astra default the site inherits. Too loose for Cormorant Garamond at display sizes." },
+      "heading": { "$value": 1.2, "$type": "number", "$description": "Recommended for the design phase." },
+      "ui": { "$value": 1.35, "$type": "number" }
+    },
+    "tracking": {
+      "nav": { "$value": "1px", "$type": "dimension" },
+      "eyebrow": { "$value": "1px", "$type": "dimension", "$description": "As built (0 to 1px). Recommended 0.08-0.12em." },
+      "heading-caps": { "$value": "1px", "$type": "dimension" },
+      "button": { "$value": "0", "$type": "dimension" }
+    },
+    "transform": {
+      "eyebrow": { "$value": "uppercase", "$type": "string" },
+      "nav": { "$value": "uppercase", "$type": "string" },
+      "button": { "$value": "uppercase", "$type": "string" }
+    }
+  },
+  "mark": {
+    "boll": {
+      "aspect-ratio": { "$value": 1.004, "$type": "number", "$description": "width / height of the trimmed mark artwork (8251 x 8219 px in the 8334 px original)." },
+      "clear-space": { "$value": 0.25, "$type": "number", "$description": "fraction of the mark's width, all sides" },
+      "min-width-screen-px": { "$value": 24, "$type": "number" },
+      "min-width-print-mm": { "$value": 8, "$type": "number" },
+      "min-width-embroidery-mm": { "$value": 30, "$type": "number", "$description": "Provisional; needs a sew-out. The boll's inner stems are fine detail." },
+      "favicon-px": { "$value": 32, "$type": "number" }
+    },
+    "horizontal-lockup": {
+      "$description": "Units where the mark width = 1000; y measured down from the mark's top edge. Measured from Cotton-Foundation-2026-01.png (5310 x 1703 px trimmed).",
+      "mark-width": { "$value": 1000, "$type": "number" },
+      "mark-height": { "$value": 996, "$type": "number" },
+      "gap-mark-to-wordmark": { "$value": 156, "$type": "number" },
+      "wordmark-left-x": { "$value": 1156, "$type": "number" },
+      "wordmark-width": { "$value": 1951, "$type": "number" },
+      "cotton-cap-height": { "$value": 286, "$type": "number", "$description": "Measured extent of COTTON including the O overshoot; nominal cap height about 275." },
+      "cotton-top-y": { "$value": 250, "$type": "number" },
+      "cotton-letter-gap": { "$value": 60, "$type": "number", "$description": "Average gap between letters of COTTON (50-70), about 21% of cap height." },
+      "foundation-cap-height": { "$value": 121, "$type": "number" },
+      "foundation-top-y": { "$value": 668, "$type": "number" },
+      "foundation-letter-gap": { "$value": 97, "$type": "number", "$description": "Uniform; about 80% of cap height. FOUNDATION is tracked out to the full width of COTTON." },
+      "line-gap": { "$value": 131, "$type": "number", "$description": "COTTON baseline (537) to FOUNDATION cap top (668)." },
+      "lockup-width": { "$value": 3107, "$type": "number" },
+      "lockup-height": { "$value": 996, "$type": "number" },
+      "lockup-aspect-ratio": { "$value": 3.118, "$type": "number" },
+      "clear-space": { "$value": 0.25, "$type": "number", "$description": "fraction of the mark's width, all sides (equal to about 250 units, roughly the COTTON cap height)" },
+      "min-width-screen-px": { "$value": 200, "$type": "number", "$description": "Below this FOUNDATION drops under 8 px cap height. Use the mark alone or the compact lockup from the design phase." },
+      "min-width-print-mm": { "$value": 40, "$type": "number" }
+    },
+    "taylors-place": {
+      "$description": "The Taylor's Place mark exists only as built (gate sign, truck decal). No digital file was supplied. Proportions to be measured from the original artwork when supplied (decision log Q1).",
+      "status": { "$value": "reference photos only", "$type": "string" }
+    }
+  },
+  "layout": {
+    "web-container-max": { "$value": "1440px", "$type": "dimension", "$description": "Elementor boxed container as built." },
+    "web-content-max": { "$value": "980px", "$type": "dimension", "$description": "Measured content column at a 1316 px viewport; the effective grid the pages use." },
+    "web-text-max": { "$value": "720px", "$type": "dimension" },
+    "web-gutter": { "$value": "24px", "$type": "dimension" },
+    "web-gutter-mobile": { "$value": "16px", "$type": "dimension" },
+    "section-padding": { "$value": "80px", "$type": "dimension", "$description": "80-100px as built." },
+    "section-padding-mobile": { "$value": "48px", "$type": "dimension" },
+    "grid-gap": { "$value": "64px", "$type": "dimension" },
+    "grid-gap-cards": { "$value": "24px", "$type": "dimension" },
+    "header-height": { "$value": "112px", "$type": "dimension" },
+    "radius-card": { "$value": "24px", "$type": "dimension" },
+    "radius-panel": { "$value": "24px", "$type": "dimension" },
+    "radius-button": { "$value": "8px", "$type": "dimension" },
+    "radius-field": { "$value": "4px", "$type": "dimension" },
+    "shadow-card": { "$value": "0 2px 4px rgba(0, 0, 0, 0.10)", "$type": "shadow" },
+    "shadow-header": { "$value": "0 2px 12px rgba(23, 52, 94, 0.08)", "$type": "shadow", "$description": "Recommended for the sticky header; the site's header has no shadow." },
+    "rule-weight-web": { "$value": "1px", "$type": "dimension" },
+    "rule-weight-print": { "$value": "0.35pt", "$type": "dimension" },
+    "button-padding": { "$value": "12px 24px", "$type": "dimension" },
+    "button-border": { "$value": "2px", "$type": "dimension" },
+    "overlay-hero": { "$value": "rgba(23, 52, 94, 0.72)", "$type": "color", "$description": "Navy overlay on hero and CTA photography, as observed (opacity approximate)." }
+  }
+}
