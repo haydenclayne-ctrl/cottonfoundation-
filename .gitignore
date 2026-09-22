@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+._*
+Thumbs.db
+
+# Python (tools/)
+__pycache__/
+*.pyc
+.venv/
+
+# Working / scratch — keep explorations in concepts/, not here
+_scratch/
+*.tmp
